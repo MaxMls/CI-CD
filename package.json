@@ -1,0 +1,14 @@
+{
+  "name": "ci-cd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Warning: no build specified\"",
+    "start": "dotenvx run -- node --experimental-strip-types index.ts",
+    "dev": "dotenvx run -- node --watch --experimental-strip-types index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
