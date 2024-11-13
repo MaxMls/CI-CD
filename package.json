@@ -6,9 +6,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"Warning: no build specified\"",
     "start": "dotenvx run -- node --experimental-strip-types index.ts",
-    "dev": "dotenvx run -- node --watch --experimental-strip-types index.ts"
+    "dev": "dotenvx run -- node --watch --experimental-strip-types index.ts",
+    "update": "dotenvx run -- bash automate.sh"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.23.0"
+  }
 }
