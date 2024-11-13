@@ -35,7 +35,7 @@ pm2 delete ecosystem.config.js || { echo "Failed to delete pm2 process"; exit 1;
 echo "Step 7: pm2 process deleted."
 
 # Step 8: Remove files from the parent folder except .env and .temp-ci/
-find . -maxdepth 1 ! -name '.env' ! -name '.temp-ci' -exec rm -rf {} + || { echo "Failed to remove unwanted files"; exit 1; }
+find . -maxdepth 1 ! -name '.env' ! -name '.temp-ci' ! -name '.' ! -name '..' -exec rm -rf {} + || { echo "Failed to remove unwanted files"; exit 1; }
 echo "Step 8a: Unwanted files removed."
 mv .temp-ci/* .temp-ci/.* . || { echo "Failed to move .temp-ci contents"; exit 1; }
 echo "Step 8b: .temp-ci contents moved."
